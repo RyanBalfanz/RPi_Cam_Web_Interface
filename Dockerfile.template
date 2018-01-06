@@ -1,0 +1,6 @@
+FROM resin/%%RESIN_MACHINE_NAME%%-python:latest
+ENV INITSYSTEM on
+WORKDIR /usr/src/app
+COPY . ./
+RUN ./install.sh
+CMD ["./start.sh"]
